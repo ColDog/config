@@ -1,0 +1,28 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+  {
+    "key": "cmd+n",
+    "command": "explorer.newFile",
+    "when": "explorerViewletFocus"
+  },
+  {
+    "key": "shift+cmd+n",
+    "command": "explorer.newFolder"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "workbench.action.terminal.toggleTerminal",
+    "when": "terminalFocus",
+  },
+  {
+    "key": "ctrl+`",
+    "command": "workbench.action.terminal.focus",
+    "when": "!terminalFocus",
+  },
+  {
+    "key": "cmd+enter",
+    "command": "list.select",
+    "when": "listFocus && !inputFocus"
+  }
+]
+
