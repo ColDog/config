@@ -3,7 +3,7 @@ function git_branch() {
 }
 
 function kubernetes_context() {
-  echo "[$( kubectl config current-context )]"
+  echo "[$( kubectl config current-context 2>/dev/null )]"
 }
 
 export PS1='\W $(git_branch) $(kubernetes_context) $ '
