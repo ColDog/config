@@ -18,3 +18,5 @@ export PATH="$PATH:$GOPATH/bin"
 
 export KUBECONFIG=~/.kube/config:~/.kube/production.kubeconfig:~/.kube/staging.kubeconfig
 
+# Since I am using a non-POSIX locale this is needed so that sort produces reliable output.
+export LC_ALL=C
