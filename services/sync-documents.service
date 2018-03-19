@@ -2,6 +2,7 @@
 Description=DocumentSync
 
 [Service]
+ExecStartPre=/bin/sh -c '/bin/echo "$(date)" > /home/colin/Documents/last-sync.txt'
 ExecStart=/usr/local/bin/aws --profile personal s3 sync /home/colin/Documents s3://colin-personal/Documents
 
 [Install]
