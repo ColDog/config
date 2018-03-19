@@ -19,3 +19,5 @@ dep
 nodejs
 build-essential
 yarn
+gometalinter
+terraform

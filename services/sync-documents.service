@@ -1,0 +1,8 @@
+[Unit]
+Description=DocumentSync
+
+[Service]
+ExecStart=/usr/local/bin/aws --profile personal s3 sync /home/colin/Documents s3://colin-personal/Documents
+
+[Install]
+WantedBy=multi-user.target
