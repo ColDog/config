@@ -9,4 +9,13 @@ spotify-client
 code-insiders
 golang-1.9-go
 python3.6
-
+awscli
+dpkg-dev
+ruby-dev
+docker-compose
+terraform
+kubectl
+dep
+nodejs
+build-essential
+yarn
