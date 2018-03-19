@@ -14,7 +14,7 @@ alias dysr="cd $HOME/Workspace/src/github.com/techdroplabs/dyspatch"
 alias com="git add -A && git commit -m"
 
 export GOPATH="$HOME/Workspace"
-export PATH="$PATH:$GOPATH/bin"
+export PATH="$PATH:$GOPATH/bin:/usr/lib/go-1.9/bin"
 
 export KUBECONFIG=~/.kube/config:~/.kube/production.kubeconfig:~/.kube/staging.kubeconfig
 

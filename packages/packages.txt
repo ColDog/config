@@ -1,0 +1,12 @@
+google-chrome-stable
+docker-ce
+apt-transport-https
+ca-certificates
+curl
+software-properties-common
+keepassx
+spotify-client
+code-insiders
+golang-1.9-go
+python3.6
+
