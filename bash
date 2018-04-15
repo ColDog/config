@@ -13,10 +13,15 @@ alias swur="cd $HOME/Workspace/src/github.com/sendwithus"
 alias dysr="cd $HOME/Workspace/src/github.com/techdroplabs/dyspatch"
 alias com="git add -A && git commit -m"
 
+export GO_VERSION="$(cat ~/.goversion)"
+
 export GOPATH="$HOME/Workspace"
-export PATH="$PATH:$GOPATH/bin:/usr/lib/go-1.9/bin"
+export PATH="$PATH:$GOPATH/bin:/usr/lib/go-$GO_VERSION/bin"
 
 export KUBECONFIG=~/.kube/config:~/.kube/production.kubeconfig:~/.kube/staging.kubeconfig
 
 # Since I am using a non-POSIX locale this is needed so that sort produces reliable output.
 export LC_ALL=C
+export LC_ALL=C.UTF-8
+export LANG=C.UTF-8
+

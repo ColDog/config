@@ -21,3 +21,4 @@ build-essential
 yarn
 gometalinter
 terraform
+helm-template
