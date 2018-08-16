@@ -3,6 +3,7 @@
 set -e
 
 version="1.10.1"
+major="1.10"
 
 cd /var/lib/dpkg-local
 
@@ -13,12 +14,12 @@ tar -C golang -xzf golang.tar.gz
 fpm --verbose \
   -s dir \
   -t deb \
-  -n golang-${version} \
+  -n golang-${major} \
    -v $version \
   --url=https://golang.org \
   --vendor=Golang \
   --description "golang" \
-  ./golang/go/=/usr/lib/go-${version}/
+  ./golang/go/=/usr/lib/go-${major}/
 
 rm golang.tar.gz
 rm -rf golang
