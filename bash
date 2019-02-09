@@ -12,13 +12,16 @@ alias cr="cd $HOME/Workspace/src/github.com/coldog"
 alias swur="cd $HOME/Workspace/src/github.com/sendwithus"
 alias dysr="cd $HOME/Workspace/src/github.com/techdroplabs/dyspatch"
 alias com="git add -A && git commit -m"
+#alias swu="dys"
+
 
 export GO_VERSION="$(cat ~/.goversion)"
-export SWU_ROOT="/home/colin/Workspace/src/github.com/techdroplabs/dyspatch"
+export DYS_ROOT="/home/colin/Workspace/src/github.com/techdroplabs/dyspatch"
+export SWU_ROOT="/home/colin/Workspace/src/github.com/sendwithus/tool-cli"
 export CFG_ROOT="/home/colin/Workspace/src/github.com/coldog/config"
 export GOPATH="$HOME/Workspace"
 
-export PATH="$PATH:$GOPATH/bin:/usr/lib/go-$GO_VERSION/bin:$SWU_ROOT:$CFG_ROOT"
+export PATH="$PATH:$GOPATH/bin:/usr/lib/go-$GO_VERSION/bin:$DYS_ROOT:$SWU_ROOT/bin:$CFG_ROOT:~/.bin/"
 
 export KUBECONFIG=~/.kube/config:~/.kube/production.kubeconfig:~/.kube/staging.kubeconfig:~/.kube/staging-us-east-2.kubeconfig
 
@@ -29,6 +32,15 @@ export LC_ALL=C
 export LC_ALL=C.UTF-8
 export LANG=C.UTF-8
 
-
 alias setclip="xclip -selection c"
 alias getclip="xclip -selection c -o"
+alias cat="bat"
+
+source $HOME/.cargo/env
+
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
