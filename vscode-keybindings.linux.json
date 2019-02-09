@@ -1,12 +1,12 @@
 // Place your key bindings in this file to overwrite the defaults
 [
   {
-    "key": "cmd+n",
+    "key": "ctrl+n",
     "command": "explorer.newFile",
     "when": "explorerViewletFocus"
   },
   {
-    "key": "shift+cmd+n",
+    "key": "shift+ctrl+n",
     "command": "explorer.newFolder"
   },
   {
@@ -20,9 +20,7 @@
     "when": "!terminalFocus",
   },
   {
-    "key": "cmd+enter",
-    "command": "list.select",
-    "when": "listFocus && !inputFocus"
+    "key": "ctrl+shift+g",
+    "command": "workbench.view.scm",
   }
 ]
-
