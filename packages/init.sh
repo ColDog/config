@@ -1,6 +1,13 @@
 #!/bin/bash
 
-for ex in $(find installer); do
+set -e
+
+mkdir -p /var/lib/dpkg-local
+
+apt install ruby-dev
+gem install fpm
+
+for ex in $(find ./installer -type f); do
   echo ">>>> running $ex"
   $ex
 done

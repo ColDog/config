@@ -4,12 +4,8 @@ apt-transport-https
 ca-certificates
 curl
 software-properties-common
-keepassx
 spotify-client
-code-insiders
 code
-golang-1.9-go
-python3.6
 awscli
 dpkg-dev
 ruby-dev
@@ -19,8 +15,5 @@ kubectl
 dep
 nodejs
 build-essential
-yarn
-gometalinter
 terraform
-helm-template
 bat
