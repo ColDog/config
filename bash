@@ -15,6 +15,7 @@ function to() {
   if [ "$1" == "c" ]; then arg="coldog"; fi
   if [ "$1" == "t" ]; then arg="techdroplabs"; fi
   if [ "$1" == "s" ]; then arg="sendwithus"; fi
+	if [ "$1" == "b" ]; then arg="battlesnakeio"; fi
 
   cd $HOME/Workspace/src/github.com/$arg
 }
@@ -43,6 +44,11 @@ alias cat="bat"
 export PYENV_ROOT="$CFG_ROOT/pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+# Goenv:
+export GOENV_ROOT="$CFG_ROOT/goenv"
+export PATH="$GOENV_ROOT/bin:$PATH"
+eval "$(goenv init -)"
 
 # Nvm:
 export NVM_DIR="$CFG_ROOT/nvm"
