@@ -6,7 +6,7 @@ mkdir -p /var/lib/dpkg-local
 
 
 echo ">>>> installing core tools"
-gem install fpm
+gem install fpm --no-rdoc --no-ri
 
 for ex in $(find ./packages/installer -type f); do
   echo ">>>> running $ex"
