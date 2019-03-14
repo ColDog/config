@@ -28,9 +28,9 @@ alias vi="nvim"
 alias vim="nvim"
 set -o vi
 
-export DYS_ROOT="/home/colin/Workspace/src/github.com/techdroplabs/dyspatch"
-export SWU_ROOT="/home/colin/Workspace/src/github.com/sendwithus/tool-cli"
-export CFG_ROOT="/home/colin/Workspace/src/github.com/coldog/config"
+export DYS_ROOT="$HOME/Workspace/src/github.com/techdroplabs/dyspatch"
+export SWU_ROOT="$HOME/Workspace/src/github.com/sendwithus/tool-cli"
+export CFG_ROOT="$HOME/.config/config"
 export GOPATH="$HOME/Workspace"
 
 export PATH="$PATH:$GOPATH/bin:$DYS_ROOT:$SWU_ROOT/bin:$CFG_ROOT:~/.bin/"
@@ -45,6 +45,11 @@ export LANG=C.UTF-8
 alias setclip="xclip -selection c"
 alias getclip="xclip -selection c -o"
 alias cat="bat"
+
+# Rbenv:
+export RBENV_ROOT="$CFG_ROOT/rbenv"
+export PATH="$CFG_ROOT/rbenv/bin:$PATH"
+eval "$(rbenv init -)"
 
 # Pyenv:
 export PYENV_ROOT="$CFG_ROOT/pyenv"

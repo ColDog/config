@@ -4,8 +4,12 @@ set -e
 
 mkdir -p /var/lib/dpkg-local
 
-apt install ruby-dev
-gem install fpm
+
+echo ">>>> installing core tools"
+apt-get update
+
+apt install -y ruby-dev
+gem install -y fpm
 
 for ex in $(find ./installer -type f); do
   echo ">>>> running $ex"
