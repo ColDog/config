@@ -12,18 +12,22 @@ source ./dotfiles/files/.config/bash
 echo ">>> installing ruby"
 rbenv install $ruby
 rbenv global $ruby
+ruby --version
 
 echo ">>> installing golang"
 goenv install $golang
 goenv global $golang
+go version
 
 echo ">>> installing python"
 pyenv install $python
 pyenv global $python
+python --version
 
 echo ">>> installing node"
 nvm install $node
 nvm use $node
+node --version
 
 echo ">>> init packages"
 ./packages/init.sh
