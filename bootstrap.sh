@@ -1,13 +1,10 @@
 #!/bin/bash
 
 apt-get update
-apt-get install -y wget unzip
-
-wget https://github.com/ColDog/config/archive/master.zip
-unzip master.zip 
+apt-get install -y git ruby-dev build-essential
 
 mkdir -p ~/.config/
-mv config-master ~/.config/config
-ls ~/.config/config
+git clone https://github.com/ColDog/config.git ~/.config/config
+
 cd ~/.config/config
 ./init.sh

@@ -6,20 +6,17 @@ mkdir -p /var/lib/dpkg-local
 
 
 echo ">>>> installing core tools"
-apt-get update
-
-apt install -y ruby-dev
 gem install fpm
 
-for ex in $(find ./installer -type f); do
+for ex in $(find ./packages/installer -type f); do
   echo ">>>> running $ex"
   $ex
 done
 
 echo ">>>> running update-local-repo.sh"
-./update-local-repo.sh
+./packages/update-local-repo.sh
 
-for ex in $(find repos); do
+for ex in $(find ./packages/repos -type f); do
   echo ">>>> running $ex"
   $ex
 done
@@ -28,4 +25,4 @@ echo ">>>> running apt-get update"
 apt-get update
 
 echo ">>>> installing"
-./install.sh
+./packages/install.sh

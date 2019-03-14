@@ -9,9 +9,6 @@ node="v10.15.1"
 
 source ./dotfiles/files/.config/bash
 
-echo ">>> init packages"
-./packages/init.sh
-
 echo ">>> installing ruby"
 rbenv install $ruby
 rbenv global $ruby
@@ -28,8 +25,14 @@ echo ">>> installing node"
 nvm install $node
 nvm use $node
 
+echo ">>> init packages"
+./packages/init.sh
+
 echo ">>> sync dotfiles"
 ./dotfiles/save.sh
+
+echo ">>> install vim"
+nvim +'PlugInstall --sync' +qa
 
 echo ">>> add to bashrc"
 echo "source $HOME/.config/bash"

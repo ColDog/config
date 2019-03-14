@@ -8,4 +8,3 @@ echo "deb http://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | tee -a /e
 
 # Import the Google Cloud Platform public key
 curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
-
