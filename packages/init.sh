@@ -9,7 +9,7 @@ echo ">>>> installing core tools"
 apt-get update
 
 apt install -y ruby-dev
-gem install -y fpm
+gem install fpm
 
 for ex in $(find ./installer -type f); do
   echo ">>>> running $ex"

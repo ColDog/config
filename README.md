@@ -2,7 +2,8 @@
 
 Configuration and dotfiles. Copied manually when I feel like I should save stuff.
 
-## Manual Install
-
-- Move editorconfig to ~/.editorconfig.
-- Move vscode-keybindings.json using the vscode config.
+```
+wget https://github.com/ColDog/config/archive/master.zip
+unzip master.zip
+mv config-master ~/.config/config
+```
