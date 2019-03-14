@@ -39,3 +39,5 @@ terraform
 bat
 xclip
 vim
+neovim
+tmux
