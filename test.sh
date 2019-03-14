@@ -1,5 +1,5 @@
 #!/bin/bash
 
 docker run --rm -it \
-  -v $PWD:/root/.config/config \
+  -v $HOME/.ssh:/root/.ssh/ \
   ubuntu
