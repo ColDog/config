@@ -1,2 +1,2 @@
 #!/bin/bash
-add-apt-repository ppa:jonathonf/vim
+apt-add-repository ppa:jonathonf/vim
