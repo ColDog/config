@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Install all the build dependencies initially here.
+echo "Canada/Pacific" > /etc/timezone
 apt-get update
 apt-get install -y \
   git \
