@@ -10,17 +10,17 @@ node="v10.15.1"
 source ./dotfiles/files/.config/bash
 
 echo ">>> installing ruby"
-rbenv install $ruby
+rbenv install -s $ruby
 rbenv global $ruby
 ruby --version
 
 echo ">>> installing golang"
-goenv install $golang
+goenv install -s $golang
 goenv global $golang
 go version
 
 echo ">>> installing python"
-pyenv install $python
+pyenv install -s $python
 pyenv global $python
 python --version
 

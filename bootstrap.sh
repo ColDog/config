@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 # Install all the build dependencies initially here.
 export DEBIAN_FRONTEND=noninteractive
 apt-get update
@@ -16,8 +18,8 @@ apt-get install -y \
   zlib1g-dev \
   libssl-dev \
   openssl \
+  python-openssl \
   libgdbm-dev \
-  libgdbm-compat-dev \
   liblzma-dev \
   libreadline-dev \
   libncursesw5-dev \
@@ -28,7 +30,13 @@ apt-get install -y \
   software-properties-common
 
 mkdir -p ~/.config/
-git clone https://github.com/ColDog/config.git ~/.config/config
 
-cd ~/.config/config
+if [ ! -d ~/.config/config ]; then
+  git clone https://github.com/ColDog/config.git ~/.config/config
+  cd ~/.config/config
+else
+  cd ~/.config/config
+  git pull
+fi
+
 ./init.sh
