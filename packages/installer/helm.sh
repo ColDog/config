@@ -23,4 +23,3 @@ fpm --verbose \
 rm helm.tgz
 rm -rf linux-amd64
 rm helm
-

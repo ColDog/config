@@ -1,2 +1,4 @@
 python-language-server[all]
 awscli
+neovim
+black
