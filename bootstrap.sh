@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install all the build dependencies initially here.
-echo "Canada/Pacific" > /etc/timezone
+export DEBIAN_FRONTEND=noninteractive
 apt-get update
 apt-get install -y \
   git \
@@ -24,7 +24,8 @@ apt-get install -y \
   uuid-dev \
   xz-utils \
   tk-dev \
-  libffi-dev
+  libffi-dev \
+  software-properties-common
 
 mkdir -p ~/.config/
 git clone https://github.com/ColDog/config.git ~/.config/config

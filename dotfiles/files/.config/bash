@@ -25,7 +25,7 @@ set -o vi
 
 export CFG_ROOT="$HOME/.config/config"
 export GOPATH="$HOME/Workspace"
-export PATH="$PATH:$GOPATH/bin:$CFG_ROOT:~/.bin/"
+export PATH="$PATH:$GOPATH/bin:$CFG_ROOT/bin/:~/.bin/"
 
 # Since I am using a non-POSIX locale this is needed so that sort produces reliable output.
 export LC_ALL=C
