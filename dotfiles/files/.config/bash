@@ -34,7 +34,10 @@ export LANG=C.UTF-8
 
 alias setclip="xclip -selection c"
 alias getclip="xclip -selection c -o"
-alias cat="bat"
+
+if [ -x "$(command -v bat)" ]; then
+  alias cat="bat"
+fi
 
 # Rbenv:
 export RBENV_ROOT="$CFG_ROOT/rbenv"

@@ -32,9 +32,11 @@ apt-get install -y \
 mkdir -p ~/.config/
 
 if [ ! -d ~/.config/config ]; then
+  echo ">>> cloning new config"
   git clone https://github.com/ColDog/config.git ~/.config/config
   cd ~/.config/config
 else
+  echo ">>> pulling latest config"
   cd ~/.config/config
   git pull
 fi
