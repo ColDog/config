@@ -15,8 +15,8 @@ for ex in $(find ./packages/scripts -type f); do
   $ex
 done
 
-echo ">>>> installing ruby"
+echo ">>>> installing gems"
 for pkg in $(cat ./packages/gems.txt); do
-  gem install
+  gem install --no-document $pkg
 done
 
