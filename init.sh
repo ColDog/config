@@ -33,7 +33,7 @@ echo ">>> init packages"
 ./packages/init.sh
 
 echo ">>> sync dotfiles"
-./dotfiles/save.sh
+./dotfiles/load.sh
 
 echo ">>> install vim"
 nvim +'PlugInstall --sync' +qa
