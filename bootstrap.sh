@@ -4,8 +4,8 @@ set -e
 
 # Install all the build dependencies initially here.
 export DEBIAN_FRONTEND=noninteractive
-apt-get update
-apt-get install -y \
+sudo apt-get update
+sudo apt-get install -y \
   git \
   ruby-dev \
   build-essential \

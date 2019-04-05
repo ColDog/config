@@ -30,7 +30,7 @@ nvm use $node
 node --version
 
 echo ">>> init packages"
-./packages/init.sh
+sudo ./packages/init.sh
 
 echo ">>> sync dotfiles"
 ./dotfiles/load.sh
