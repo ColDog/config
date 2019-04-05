@@ -26,8 +26,4 @@ for ex in $(find ./packages/repos -type f); do
   $ex
 done
 
-echo ">>>> running apt-get update"
-apt-get update
 
-echo ">>>> installing"
-./packages/install.sh

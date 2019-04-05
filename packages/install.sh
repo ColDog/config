@@ -2,6 +2,9 @@
 
 set -e
 
+echo ">>>> running apt-get update"
+apt-get update
+
 for pkg in $(cat ./packages/packages.txt); do
   apt-get install -y $pkg
 done

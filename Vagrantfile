@@ -10,5 +10,5 @@ Vagrant.configure("2") do |config|
 
   # Shell provisioning:
   config.vm.provision :file, source: "bootstrap.sh", destination: "/vagrant/bootstrap.sh"
-  config.vm.provision :shell, privileged: false, inline: "sudo /vagrant/bootstrap.sh"
+  config.vm.provision :shell, privileged: false, inline: "/vagrant/bootstrap.sh"
 end
