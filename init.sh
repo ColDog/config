@@ -33,7 +33,7 @@ echo ">>> init packages"
 sudo ./packages/init.sh
 
 echo ">>> install packages"
-sudo ./packages/install.sh
+sudo -E env "PATH=$PATH" ./packages/install.sh
 
 echo ">>> sync dotfiles"
 ./dotfiles/load.sh
