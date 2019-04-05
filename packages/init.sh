@@ -2,6 +2,11 @@
 
 set -e
 
+# This script can't be run multiple times in a row, it sucks.
+if [ -d /var/lib/dpkg-local ]; then
+  exit 0
+fi
+
 mkdir -p /var/lib/dpkg-local
 
 
