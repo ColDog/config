@@ -3,9 +3,7 @@
 project_root="${PWD%plugins/go-build}"
 load test_helper
 
-echo $PATH
 export PATH="${project_root}libexec:$PATH"
-echo $PATH
 
 @test "has usage instructions" {
   run goenv-help --usage uninstall
@@ -87,8 +85,25 @@ OUT
 1.11.3
 1.11.4
 1.11.5
+1.11.6
+1.11.7
+1.11.8
+1.11.9
+1.11.10
+1.11.11
+1.11.12
+1.12.0
 1.12beta1
 1.12beta2
+1.12rc1
+1.12.1
+1.12.2
+1.12.3
+1.12.4
+1.12.5
+1.12.6
+1.12.7
+1.13beta1
 OUT
 }
 
@@ -401,8 +416,25 @@ Available versions:
   1.11.3
   1.11.4
   1.11.5
+  1.11.6
+  1.11.7
+  1.11.8
+  1.11.9
+  1.11.10
+  1.11.11
+  1.11.12
+  1.12.0
   1.12beta1
   1.12beta2
+  1.12rc1
+  1.12.1
+  1.12.2
+  1.12.3
+  1.12.4
+  1.12.5
+  1.12.6
+  1.12.7
+  1.13beta1
 OUT
 }
 
@@ -472,8 +504,25 @@ Available versions:
   1.11.3
   1.11.4
   1.11.5
+  1.11.6
+  1.11.7
+  1.11.8
+  1.11.9
+  1.11.10
+  1.11.11
+  1.11.12
+  1.12.0
   1.12beta1
   1.12beta2
+  1.12rc1
+  1.12.1
+  1.12.2
+  1.12.3
+  1.12.4
+  1.12.5
+  1.12.6
+  1.12.7
+  1.13beta1
 OUT
 }
 
@@ -609,3 +658,26 @@ OUT
   assert [ -x "${GOENV_ROOT}/shims/go" ]
 }
 
+
+@test "adds patch version '0' to definition when version argument is not already installed version and gets installed" {
+  # NOTE: Create fake definition to install
+  mkdir -p $GOENV_ROOT/plugins/go-build/share/go-build
+  cp $BATS_TEST_DIRNAME/fixtures/definitions/1.2.0 $GOENV_ROOT/plugins/go-build/share/go-build
+
+  stub goenv-hooks "install : echo '$HOOK_PATH'/install.bash"
+
+  run goenv-install -f 1.2
+
+  assert_output <<-OUT
+Adding patch version 0 to 1.2
+Downloading 1.2.0.tar.gz...
+-> http://localhost:8090/1.2.0/1.2.0.tar.gz
+Installing Go Linux 64bit 1.2.0...
+Installed Go Linux 64bit 1.2.0 to ${GOENV_ROOT}/versions/1.2.0
+
+OUT
+  assert_success
+
+  assert [ -f "${GOENV_ROOT}/versions/1.2.0/bin/go" ]
+  run cat "${GOENV_ROOT}/versions/1.2.0/bin/go"
+}
