@@ -25,3 +25,4 @@ vim
 neovim
 tmux
 httpie
+google-cloud-sdk

@@ -2,7 +2,7 @@
 
 set -e
 
-version="0.11.8"
+version="0.12.3"
 
 cd /var/lib/dpkg-local
 

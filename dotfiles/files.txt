@@ -1,5 +1,6 @@
 .config/nvim/init.vim
 .config/nvim/coc-settings.json
+.tmuxinator/default.yml
 .tmux.conf
 .editorconfig
 .config/bash

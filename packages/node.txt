@@ -1,1 +1,2 @@
 prettier
+javascript-typescript-langserver
